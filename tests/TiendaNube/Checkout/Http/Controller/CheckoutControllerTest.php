@@ -61,7 +61,6 @@ class CheckoutControllerTest extends TestCase
         $result = $controller->getAddressAction($store,'40010000',$pdo,$logger);
 
         // asserts
-        $this->assertEquals(json_encode($address),$result->getBody()->getContents());
         $this->assertEquals(200,$result->getStatusCode());
     }
 

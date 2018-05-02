@@ -4,6 +4,7 @@ namespace TiendaNube\Checkout\Service\Shipping;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
+use TiendaNube\Checkout\Service\Shipping\AddressService;
 
 class AddressServiceTest extends TestCase
 {
@@ -46,7 +47,6 @@ class AddressServiceTest extends TestCase
         $result = $service->getAddressByZip('40010000');
     
         // asserts
-        $this->assertNotNull($result);
         $this->assertEquals($address,$result);
     }
 
